@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/create_event_id_sequence.yaml
+  - include:
+      file: db/changelog/changeset/create_event_table.yaml

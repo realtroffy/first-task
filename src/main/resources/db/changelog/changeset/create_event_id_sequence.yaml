@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: crete_event_id_sequence
+      author: artur
+      changes:
+        - createSequence:
+            cacheSize: 1
+            cycle: false
+            dataType: bigint
+            incrementBy: 3
+            maxValue: 9223372036854775807
+            minValue: 1
+            sequenceName: event_id_sequence
+            startValue: 1
