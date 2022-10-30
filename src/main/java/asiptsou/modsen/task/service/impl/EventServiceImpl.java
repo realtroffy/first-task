@@ -23,7 +23,7 @@ import static java.util.Objects.isNull;
 @AllArgsConstructor
 public class EventServiceImpl implements EventService {
 
-  public static final String NO_SUCH_EVENT_EXCEPTION_MESSAGE = "Event was not found by id = ";
+  private static final String NO_SUCH_EVENT_EXCEPTION_MESSAGE = "Event was not found by id = ";
   private static final LocalDateTime MIN_DATE = of(1990, 1, 1, 0, 0, 0);
   private static final LocalDateTime MAX_DATE = of(3000, 1, 1, 0, 0, 0);
   private static final String DATE_ERROR = "Date from {%s} can't be after the date to {%s}";

@@ -131,7 +131,7 @@ public class EventController {
     int deletedRow = eventService.deleteById(id);
     return deletedRow > 0
         ? ok().body("Event was successfully deleted with id = " + id)
-        : ok().body("Event was not found by such id = " + id);
+        : ok().body("Event was not found by id = " + id);
   }
 
   @Operation(summary = "Update event by id and new body")
