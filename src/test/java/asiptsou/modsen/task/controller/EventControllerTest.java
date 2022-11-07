@@ -1,7 +1,7 @@
 package asiptsou.modsen.task.controller;
 
 import asiptsou.modsen.task.exception.GlobalDefaultExceptionHandler;
-import asiptsou.modsen.task.model.dto.EventDto;
+import asiptsou.modsen.task.dto.EventDto;
 import asiptsou.modsen.task.model.EventFilter;
 import asiptsou.modsen.task.service.EventService;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -180,7 +180,7 @@ class EventControllerTest {
             .getResponse()
             .getContentAsString();
 
-    String actual = "Event was not found by such id = " + NOT_EXIST_ID;
+    String actual = "Event was not found by id = " + NOT_EXIST_ID;
 
     assertEquals(expected, actual);
 

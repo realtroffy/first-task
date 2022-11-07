@@ -3,7 +3,7 @@ package asiptsou.modsen.task.service.impl;
 import asiptsou.modsen.task.converter.EventConverter;
 import asiptsou.modsen.task.dao.EventDao;
 import asiptsou.modsen.task.model.Event;
-import asiptsou.modsen.task.model.dto.EventDto;
+import asiptsou.modsen.task.dto.EventDto;
 import asiptsou.modsen.task.model.EventFilter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

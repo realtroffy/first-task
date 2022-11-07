@@ -1,4 +1,4 @@
-package asiptsou.modsen.task.model.dto;
+package asiptsou.modsen.task.dto;
 
 import asiptsou.modsen.task.service.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.annotation.JsonFormat;

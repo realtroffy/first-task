@@ -2,7 +2,7 @@ package asiptsou.modsen.task.service.impl;
 
 import asiptsou.modsen.task.converter.EventConverter;
 import asiptsou.modsen.task.dao.EventDao;
-import asiptsou.modsen.task.model.dto.EventDto;
+import asiptsou.modsen.task.dto.EventDto;
 import asiptsou.modsen.task.model.Event;
 import asiptsou.modsen.task.model.EventFilter;
 import asiptsou.modsen.task.service.EventService;
@@ -46,7 +46,6 @@ public class EventServiceImpl implements EventService {
   public EventDto save(EventDto eventDto) {
     Event event = eventDao.save(eventConverter.toEntity(eventDto));
     eventDto.setId(event.getId());
-    eventDto.setDate(event.getDate());
     return eventDto;
   }
 

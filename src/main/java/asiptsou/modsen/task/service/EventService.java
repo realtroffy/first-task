@@ -1,6 +1,6 @@
 package asiptsou.modsen.task.service;
 
-import asiptsou.modsen.task.model.dto.EventDto;
+import asiptsou.modsen.task.dto.EventDto;
 import asiptsou.modsen.task.model.EventFilter;
 
 import java.util.List;

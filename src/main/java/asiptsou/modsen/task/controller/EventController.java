@@ -1,7 +1,7 @@
 package asiptsou.modsen.task.controller;
 
 import asiptsou.modsen.task.model.EventFilter;
-import asiptsou.modsen.task.model.dto.EventDto;
+import asiptsou.modsen.task.dto.EventDto;
 import asiptsou.modsen.task.service.EventService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
