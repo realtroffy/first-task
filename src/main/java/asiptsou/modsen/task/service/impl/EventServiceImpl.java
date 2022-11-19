@@ -88,12 +88,15 @@ public class EventServiceImpl implements EventService {
   @Override
   @Transactional
   public void update(long id, EventDto eventDto) {
-    if (eventDao.getById(id).isEmpty()) {
-      throw new NoSuchElementException(NO_SUCH_EVENT_EXCEPTION_MESSAGE + id);
-    }
-    Event event = eventConverter.toEntity(eventDto);
-    event.setId(id);
-    eventDao.update(event);
+    Event event =
+        eventDao
+            .getById(id)
+            .orElseThrow(() -> new NoSuchElementException(NO_SUCH_EVENT_EXCEPTION_MESSAGE + id));
+
+    Event eventForUpdate = eventConverter.toEntity(eventDto);
+    eventForUpdate.setId(event.getId());
+    eventForUpdate.setVersion(event.getVersion());
+    eventDao.update(eventForUpdate);
   }
 
   private void checkFromIsBeforeTo(LocalDateTime from, LocalDateTime to) {

@@ -26,6 +26,8 @@ public class EventDto {
 
   private Long id;
 
+  private Long version;
+
   @NotBlank(message = "Can't be null")
   @Size(min = 5, max = 50, message = "Topic length should be between 5 and 50 characters")
   private String topic;
@@ -79,6 +81,7 @@ public class EventDto {
   public String toString() {
     return new ToStringBuilder(this)
         .append("id", id)
+        .append("version", version)
         .append("topic", topic)
         .append("description", description)
         .append("organizer", organizer)

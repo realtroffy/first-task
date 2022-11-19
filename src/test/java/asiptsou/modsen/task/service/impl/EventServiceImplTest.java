@@ -140,8 +140,7 @@ class EventServiceImplTest {
 
     IllegalArgumentException exception =
         assertThrows(
-            IllegalArgumentException.class,
-            () -> eventService.getListEventByFilter(eventFilter));
+            IllegalArgumentException.class, () -> eventService.getListEventByFilter(eventFilter));
 
     assertEquals(
         "Date from {2032-06-15T22:49} can't be after the date to {2025-06-15T22:49}",

@@ -3,3 +3,5 @@ databaseChangeLog:
       file: db/changelog/changeset/create_event_id_sequence.yaml
   - include:
       file: db/changelog/changeset/create_event_table.yaml
+  - include:
+      file: db/changelog/changeset/add_version_field_to_event.yaml

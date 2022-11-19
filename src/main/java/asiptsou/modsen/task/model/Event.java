@@ -15,6 +15,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Version;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -36,6 +37,9 @@ public class Event implements Serializable {
       allocationSize = 3)
   @Column(name = "ID")
   private Long id;
+
+  @Version
+  private Long version;
 
   @Column(name = "TOPIC")
   private String topic;
@@ -83,12 +87,13 @@ public class Event implements Serializable {
   @Override
   public String toString() {
     return new ToStringBuilder(this)
-        .append("id", id)
-        .append("topic", topic)
-        .append("description", description)
-        .append("organizer", organizer)
-        .append("date", date)
-        .append("location", location)
-        .toString();
+            .append("id", id)
+            .append("version", version)
+            .append("topic", topic)
+            .append("description", description)
+            .append("organizer", organizer)
+            .append("date", date)
+            .append("location", location)
+            .toString();
   }
 }

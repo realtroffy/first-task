@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_version_field_to_event
+      author: artur
+      changes:
+        - addColumn:
+            tableName: EVENT
+            columns:
+              - column:
+                  name: version
+                  type: bigint
